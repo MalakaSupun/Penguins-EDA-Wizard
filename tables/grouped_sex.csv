@@ -1,0 +1,5 @@
+,bill_length_mm,bill_length_mm,bill_length_mm,bill_depth_mm,bill_depth_mm,bill_depth_mm,flipper_length_mm,flipper_length_mm,flipper_length_mm,body_mass_g,body_mass_g,body_mass_g
+,mean,std,count,mean,std,count,mean,std,count,mean,std,count
+sex,,,,,,,,,,,,
+FEMALE,42.1,4.9,165,16.43,1.8,165,197.36,12.5,165,3862.27,666.17,165
+MALE,45.85,5.37,168,17.89,1.86,168,204.51,14.55,168,4545.68,787.63,168
