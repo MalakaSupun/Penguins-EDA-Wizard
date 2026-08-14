@@ -1,0 +1,6 @@
+,bill_length_mm,bill_length_mm,bill_length_mm,bill_depth_mm,bill_depth_mm,bill_depth_mm,flipper_length_mm,flipper_length_mm,flipper_length_mm,body_mass_g,body_mass_g,body_mass_g
+,mean,std,count,mean,std,count,mean,std,count,mean,std,count
+island,,,,,,,,,,,,
+Biscoe,45.26,4.77,167,15.87,1.82,167,209.71,14.14,167,4716.02,782.86,167
+Dream,44.17,5.95,124,18.34,1.13,124,193.07,7.51,124,3712.9,416.64,124
+Torgersen,38.95,3.03,51,18.43,1.34,51,191.2,6.23,51,3706.37,445.11,51

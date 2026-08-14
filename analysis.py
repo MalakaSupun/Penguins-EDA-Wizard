@@ -9,7 +9,7 @@ os.makedirs("figs", exist_ok=True)
 sns.set_theme(style="whitegrid", palette="Set2")
 plt.rcParams["figure.dpi"] = 150
 
-df = pd.read_csv("penguins.csv")
+df = pd.read_csv("Data\penguins.csv")
 
 numeric_cols = ["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"]
 categorical_cols = ["species", "island", "sex"]
@@ -42,7 +42,7 @@ for col in numeric_cols:
         "CV%": round(s.std() / s.mean() * 100, 2),
     })
 desc_numeric = pd.DataFrame(desc_rows)
-desc_numeric.to_csv("desc_numeric.csv", index=False)
+desc_numeric.to_csv("tables/desc_numeric.csv", index=False)
 print(desc_numeric.to_string(index=False))
 
 # ------------------------------------------------------------------
@@ -116,18 +116,18 @@ plt.close()
 print("\n--- Grouped means by species ---")
 grouped_species = df_clean.groupby("species")[numeric_cols].agg(["mean", "std", "count"]).round(2)
 print(grouped_species)
-grouped_species.to_csv("grouped_species.csv")
+grouped_species.to_csv("tables/grouped_species.csv")
 
 print("\n--- Grouped means by island ---")
 grouped_island = df_clean.groupby("island")[numeric_cols].agg(["mean", "std", "count"]).round(2)
 print(grouped_island)
-grouped_island.to_csv("grouped_island.csv")
+grouped_island.to_csv("tables/grouped_island.csv")
 
 print("\n--- Grouped means by sex ---")
 df_sex = df_clean.dropna(subset=["sex"])
 grouped_sex = df_sex.groupby("sex")[numeric_cols].agg(["mean", "std", "count"]).round(2)
 print(grouped_sex)
-grouped_sex.to_csv("grouped_sex.csv")
+grouped_sex.to_csv("tables/grouped_sex.csv")
 
 fig, ax = plt.subplots(figsize=(8, 5))
 sns.barplot(df_sex, x="species", y="body_mass_g", hue="sex", ax=ax, errorbar="sd")
@@ -148,7 +148,7 @@ plt.savefig("figs/07_species_by_island.png", bbox_inches="tight")
 plt.close()
 print("\nCrosstab island x species:")
 print(comp)
-comp.to_csv("crosstab_island_species.csv")
+comp.to_csv("tables/crosstab_island_species.csv")
 
 # ------------------------------------------------------------------
 # 9. ANOVA checks
